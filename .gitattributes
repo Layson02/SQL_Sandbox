@@ -1,1 +1,2 @@
 *.sql linguist-detectable=True
+*.bat linguist-detectable=True
