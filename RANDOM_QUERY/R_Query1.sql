@@ -16,3 +16,5 @@ join Funcionarios f
 on p.CodigoDoFuncionario = f.CodigoDoFuncionario
 WHERE YEAR(p.DataDoPedido) = 1996 AND MONTH(p.DataDoPedido) = 8
 ORDER BY p.CodigoDoFuncionario
+
+-- ???
