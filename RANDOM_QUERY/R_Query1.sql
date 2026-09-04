@@ -17,4 +17,8 @@ on p.CodigoDoFuncionario = f.CodigoDoFuncionario
 WHERE YEAR(p.DataDoPedido) = 1996 AND MONTH(p.DataDoPedido) = 8
 ORDER BY p.CodigoDoFuncionario
 
--- ???
+select c.CodigoDoCliente, c.NomeDoContato,p.NumeroDoPedido 
+from Clientes c
+LEFT JOIN Pedidos p
+on c.CodigoDoCliente = p.CodigoDoCliente
+where p.NumeroDoPedido IS NULL
