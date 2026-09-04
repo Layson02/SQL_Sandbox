@@ -1,0 +1,57 @@
+1. Exibir o CódigoDoProduto, Desconto de todos os produtos já vendidos.
+
+2. Exibir o CódigoDoProduto de todos os produtos já comercializados.
+
+3. Exibir o CódigoDoCliente de todos os clientes que já fizeram solicitação de pedidos.
+
+4. Exibir o NomeDoCliente, Endereço e uma coluna adicional com a palavra “Cliente preferencial”.
+
+5. Exibir os 25% dos registros existentes na tabela Produtos.
+
+6. Exibir os 50% dos registros existentes na tabela Funcionários.
+
+7. Exibir os 10% dos registros existentes na tabela Pedido.
+
+8. Exibir os 17% dos registros existentes na tabela Fornecedores.
+
+9. Exibir os 85% dos registros existentes na tabela Categoria.
+
+10. Exibir todas as cidades dos funcionários sem haver repetição de linhas.
+
+11. Exibir todas as regiões dos funcionários sem haver repetição de linhas.
+
+12. Exibir todos os países dos fornecedores sem haver repetição de linhas.
+
+13. Exibir o código do cliente que já fizeram pedido em nossa loja, sem haver repetição de linha.
+
+14. Exibir o código de todos os produtos que já foram vendidos em nossa loja, sem haver repetição de linhas.
+
+15. Exibir o CódigoDoProduto, NomeDoProduto, PreçoUnitário e uma coluna adicional com um acréscimo de 7% sobre o PreçoUnitário da tabela Produtos.
+
+16. Exibir o NúmeroDoPedido, PreçoUnitário, Desconto e uma coluna adicional com a diferença entre o PreçoUnitário e o Desconto (é dado em percentagem), com o título “Preço Final”.
+
+17. Exibir o NúmeroDoPedido, uma coluna adicional com o preço total (PreçoUnitário * Quantidade) com o título “Preço Total” e uma coluna adicional com o preço final ((PreçoUnitário * Quantidade) – Desconto (é dado em percentagem)) com o título “Preço Final” da tabela DetalheDoPedido.
+
+18. Exibir o PreçoUnitário, uma coluna adicional com o preço unitário acrescido de 25%, uma coluna adicional com o preço unitário acrescido de 35% e uma coluna adicional com o preço unitário acrescido de 45%, da tabela Produtos, coloque um título para cada coluna adicional.
+
+19. Exibir o NúmeroDoPedido, Frete, uma coluna adicional com o Frete acrescido de 5% e uma coluna adicional com o Frete acrescido de 10%, da tabela Pedido, coloque um título para cada coluna adicional.
+
+20. Exibir o CódigoDoProduto, NomeDoProduto, NívelDeReposição e uma coluna adicional com o NívelDeReposição acrescido de 5, coloque um título da coluna que você adicionou, da tabela Produtos.
+
+21. Exibir o CódigoDoProduto, uma coluna adicional com o total em estoque (PreçoUnitário * UnidadesEmEstoque) com o título “Total em Estoque” da tabela Produtos.
+
+22. Exibir o NúmeroDoPedido, CódigoDoProduto, PreçoUnitário, Quantidade, uma coluna com o preço total acrescido de 20% com o título “Cheque p/ 30 dias”, uma coluna com o preço total acrescido de 30% com o título “Cheque p/ 60 dias” e uma coluna com o preço total descontado de 15% com o título “À vista”, da tabela DetalhesDoPedido.
+
+23. Exibir o CódigoDoProduto, NomeDoProduto, NívelDeReposição e uma coluna adicional com um acréscimo de 5 no NívelDeReposição, da tabela Produtos.
+
+24. Exibir o NúmeroDoPedido, CódigoDoCliente com título “Cliente”, CódigoDoFuncionário e uma coluna com o valor do frete descontado 7% e título “Frete c/ desconto”.
+
+25. Exibir o Nome e Sobrenome dos funcionários por ordem decrescente de nome.
+
+26. Exibir o CódigoDoProduto, NomeDoProduto e PreçoUnitário por ordem crescente de NomeDoProduto.
+
+27. Exibir o CódigoDoProduto com título “Cód.”, NomeDoProduto com título “Produto” e PreçoUnitário com título “P. Unitário”, por ordem decrescente de CódigoDoProduto.
+
+28. Exibir País, Região, CódigoDoFornecedor, NomeDaEmpresa e NomeDoContato da tabela Fornecedores por ordem crescente de País, decrescente de Região e crescente de NomeDaEmpresa.
+
+29. Exibir o CódigoDoFuncionário, SobreNome e Nome dos funcionários por ordem crescente de País.
