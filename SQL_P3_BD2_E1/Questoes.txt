@@ -1,0 +1,33 @@
+1. Quantas unidades estão cadastradas na tabela bebidas?
+
+2. Quantas categorias estão cadastradas na tabela bebidas?
+
+3. Quantas bebidas apresentam em seu nome a palavra 'COPO'?
+
+4. Preciso de um arquivo em formato csv com os dados bebida e custobebida.
+
+5. Preciso de um arquivo em formato xlsx com as seguintes colunas:
+   a. Bebida
+   b. Custobebida
+   c. Custobebida + 10%
+   d. Precocardapio
+   e. Precocardapio - 15%
+
+6. Preciso da lista das bebidas que estejam entre os idbedidas de 100 até 150?
+
+7. Quais são das bebidas que começam com a letra "V"?
+
+8. Quais as 10 bebidas mais caras?
+
+9. Quais as 20 bebidas mais baratas?
+
+10. Quais as 30 bebidas com maior custo?
+
+11. Quais as bebidas com o código começando com "RV4"?
+
+12. Relacionar as bebidas com os seguintes cabeçalho:
+   a. Bebida -> Produto
+   b. Precocardapio -> Preço Venda
+   c. Custobebida -> Custo Bebida
+
+13. Quais as bebidas que apresentam em seu nome a palavra "ZERO"?
