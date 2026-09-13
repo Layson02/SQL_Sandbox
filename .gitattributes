@@ -1,6 +1,11 @@
 *.sql linguist-detectable=True
 *.bat linguist-detectable=True
+*.csv linguist-detectable=false
+*.xlsx linguist-detectable=false
+
 
 # Scripts fornecidos externamente / base de dados da disciplina
 SQL_P3_BD2_E2/Script_BPPedidos_Povoando_Tabelas.sql linguist-generated=true
 SQL_P3_BD2_E2/Script_BPPedidos_Criando_Tabelas.sql linguist-vendored
+SQL_P3_BD2_E1/Script_Tabela_Bebidas.sql linguist-generated=true
+SQL_P3_BD2_E1/Script_BPPedidos_Criando_Tabelas.sql linguist-vendored
