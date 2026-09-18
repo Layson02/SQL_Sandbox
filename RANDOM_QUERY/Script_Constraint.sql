@@ -25,8 +25,8 @@ ALTER TABLE Fornecedores
 ADD CONSTRAINT UQ_Telefone UNIQUE (Telefone);
 
 ALTER TABLE Pedidos
-ADD CONSTRAINT FK_ClienteID FOREIGN KEY (ClienteID) REFERENCES Clientes(ClienteID);
+ADD CONSTRAINT FK_ClienteID FOREIGN KEY (CodigoDoCliente) REFERENCES Clientes(CodigoDoCliente);
 
 ALTER TABLE Clientes
-ADD CONSTRAINT PK_ClienteID PRIMARY KEY (ClienteID);
+ADD CONSTRAINT PK_ClienteID PRIMARY KEY (CodigoDoCliente);
 
