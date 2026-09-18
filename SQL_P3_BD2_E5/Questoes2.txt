@@ -1,0 +1,51 @@
+﻿1. Exibir o nome do produto cujo preço unitário seja acima do preço unitário médio.
+
+2. Exibir um relatório com o nome dos clientes que já compraram o produto "Maxilaku".
+
+3. Exibir um relatório com o número do pedido de todos os pedidos que tiveram acima de 5 itens por pedido.
+
+4. Exibir um relatório com o nome dos clientes e o valor do maior pedido feito por ele.
+
+5. Exibir um relatório com o nome do produto e a maior quantidade vendida desse produto.
+
+6. Exibir um relatório com o nome do produto e o preço mais baixo vendido desse produto.
+
+7. Exibir o número do pedido de todos os pedidos cuja transportadora seja "Speedy Express" no segundo trimestre de 1996.
+
+8. Exibir um relatório com todos os números de pedidos realizados nos meses de Abril/96 e Março/97.
+
+9. Exibir um relatório com todos os números de pedidos que tiveram seu valor ((PreçoUnitário * Quantidade) - Desconto), acima da média das vendas relacionados no segundo trimestre 
+de 1997.
+
+10. Exibir um relatório com o nome dos fornecedores que apresentam preço unitário dos seus produtos acima da média.
+
+11. Exibir um relatório com o nome do produto e o seu preço unitário de todos que pertença a categoria "Confeitos" (utilizando sub-query).
+
+12. Exibir o número do pedido, código do cliente e a data do pedido de todos os pedidos das transportadora "Speedy Express" ou "Federal Shipping" (utilizando sub-query).
+
+13. Exibir um relatório com o nome do cliente (NomeDaEmpresa), o número do pedido e a data do pedidos de todos os pedidos realizados no mês de agosto de 1996 ou no mês de 
+setembro 1997.
+
+14. Exibir um relatório com todos os pedidos que foram feitos por clientes que apresentam Fax nulo.
+
+15. Exibir um relatório com o nome dos clientes que tiveram o valor total de seus pedidos acima da média de pedidos.
+
+16. Exibir o nome dos funcionários que estão abaixo da média de idade.
+
+17. Exibir o nome dos funcionários que estão acima da média do número de pedidos feito pelos funcionários.
+
+18. Exibir o número do pedido de todos os clientes que não apresentam Fax.
+
+19. Exibir o Nome dos clientes que ainda não efetuaram nenhum pedido.
+
+20. Exibir todos o pedidos que contiver algum produto cuja categoria seja "Bebidas".
+
+21. Exibir o nome dos funcionários que fizeram pedidos para os clientes: Antonio Moreno Taquería, Blauer See Delikatessen e Ernst Handel.
+
+22. Exibir o nome dos clientes cujo pedidos estejam com o valor do frete acima da média.
+
+23. Exibir o nome dos produtos cujo desconto dado esteja abaixo da média de descontos oferecidos aos produtos.
+
+24. Exibir o nome dos fornecedores cujo produto apresente preço unitário acima da média dos preços unitários.
+
+25. Exibir o nome dos produtos que apresentam unidades em estoque abaixo da média das quantidades vendidas.
