@@ -1,0 +1,39 @@
+﻿1. Exibir o total de frete pago.
+
+2. Quantos funcionários foram contratados em 1992.
+
+3. Quantos fornecedores são da Alemanha.
+
+4. Qual o total de quantidades vendidas.
+
+5. Qual o valor do frete mais caro.
+
+6. Qual o valor do desconto mais barato.
+
+7. Quantos produtos são da categoria Condimentos (CódigoDaCategoria = 2).
+
+8. Quantas categorias começam com a letra "C" (nome da categoria).
+
+9. Quantos produtos estão com o estoque abaixo do nível de reposição.
+
+10. Qual o valor total dos preços unitários em Produtos.
+
+11. Quanto já foi vendido (Preço Unitário * Quantidade) do produto cujo código é 51.
+
+12. Quantos pedidos foram feitos pelo cliente cujo código é "ROMEY" no ano de 1996.
+
+13. Quantos funcionários fazem aniversário no mês de julho.
+
+14. Quantos produtos começam com a letra "C", "G" ou "N".
+
+15. Quantos clientes estão localizados na Alemanha, México ou Reino Unido.
+
+16. Quantos clientes não possuem fax.
+
+17. Qual o total existente em estoque (PreçoUnitário * UnidadesEmEstoque).
+
+18. Qual o total já vendido (Preço Unitário * Quantidade).
+
+19. Qual o total vendido (Preço Unitário * Quantidade) do produto cujo código é 19.
+
+20. Quanto de frete foi pago para os pedidos feitos pelo cliente cujo código é "LILAS".
