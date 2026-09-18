@@ -18,3 +18,10 @@ SELECT COUNT(*) AS FornecedoresAlemanha
 FROM Fornecedores
 WHERE Pais = 'Alemanha';
 
+-- Q4
+
+SELECT SUM(Quantidade) AS TotalQuantidadesVendidas
+FROM Detalhes_do_Pedido;
+
+-- Q5
+
