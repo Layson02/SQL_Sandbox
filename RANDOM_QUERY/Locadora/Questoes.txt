@@ -1,0 +1,58 @@
+
+1. Criar um pequeno banco de dados de nome "Locadora".
+
+2. Criar as tabelas descritas no dicionário de dados abaixo.
+
+3. Crie as constraints para atender ao que for especificado no dicionário de dados.
+
+4. Inserir os dados relacionados.
+
+5. Insira alguns registros na tabela Filme_Ator.
+
+6. Alterar a duração do filme Triplo X de 180 para 200.
+
+7. Alterar a categoria do filme Connan de Ação para Aventura.
+
+8. Apagar o tipo de participação cujo identificador seja 2.
+
+9. Apagar todos os filmes que tenham duração acima de 410.
+
+10. Crie uma tabela de nome "Controle_Exclusao". Os atributos desta tabela são:
+IDExclusao, IDFilme, IDAtor e IDTipo.
+
+============================================================
+DICIONÁRIO DE DADOS DO SISTEMA DE LOCADORA
+============================================================
+
+Tabela: Filme
+
+Nome      | Tipo    | Tam. | Descrição              | Escopo       | P
+--------- | ------- | ---- | ---------------------- | ------------ | -
+IDFilme   | Int     | 4    | Identificador do filme | >=1 e <=2000 | X
+Nome      | VarChar | 30   | Nome completo do filme |              |
+Duração   | Int     |      | Duração do filme      |              |
+Categoria | VarChar | 13   | Categoria do filme    |              |
+
+Tabela: Ator
+
+Nome      | Tipo     | Tam. | Descrição                | Escopo      | P
+--------- | -------- | ---- | ------------------------ | ----------- | -
+IDAtor    | Int      | 3    | Identificador do ator   | >=1 e <=999 | X
+Ator      | VarChar  | 20   | Nome do ator             |             |
+Cachê     | SmallInt |      | Valor exigido pelo ator | <=45000     |
+Produtora | SmallInt |      | Produtora do ator       |             |
+
+Tabela: TipoParticipacao
+
+Nome  | Tipo    | Tam. | Descrição                         | Escopo      | P
+----- | ------- | ---- | --------------------------------- | ----------- | -
+IDTipo| Int     | 3    | Identificador do tipo participação| >=1 e <=100 | X
+Tipo  | VarChar | 30   | Descrição do tipo de participação|             |
+
+Tabela: Filme_Ator
+
+Nome    | Tipo | Descrição
+------- | ---- | ------------------------------
+IDFilme | Int  | Identificador do filme
+IDAtor  | Int  | Identificador do ator
+IDTipo  | Int  | Identificador do tipo de participação

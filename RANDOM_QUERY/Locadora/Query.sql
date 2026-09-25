@@ -8,6 +8,8 @@ GO
 
 -- Q2
 
+-- Seguindo o literal do diagrama/dicionário: Produtora é SMALLINT.
+
 -- CREATE TABLE Filme (
     -- IDFilme INT NOT NULL,
     -- Nome VARCHAR(30) NOT NULL,
@@ -19,7 +21,7 @@ GO
     -- IDAtor INT NOT NULL,
     -- Ator VARCHAR(20) NOT NULL,
     -- Cache SMALLINT,
-    -- Produtora VARCHAR(30)
+    -- Produtora SMALLINT
 -- );
 
 -- CREATE TABLE TipoParticipacao (
@@ -62,12 +64,15 @@ ALTER TABLE TipoParticipacao
     ADD CONSTRAINT CHK_Tipo_ID CHECK (IDTipo >= 1 AND IDTipo <= 100);
 
 -- Chaves Estrangeiras (FK)
+
 ALTER TABLE Filme_Ator
     ADD CONSTRAINT FK_FilmeAtor_Filme FOREIGN KEY (IDFilme) REFERENCES Filme(IDFilme),
     CONSTRAINT FK_FilmeAtor_Ator FOREIGN KEY (IDAtor) REFERENCES Ator(IDAtor),
     CONSTRAINT FK_FilmeAtor_Tipo FOREIGN KEY (IDTipo) REFERENCES TipoParticipacao(IDTipo);
 
 -- Q4
+
+-- Seguindo o literal do diagrama/dicionário: Produtora deve receber nomes (mesmo não podendo :/).
 
 INSERT INTO Filme (IDFilme, Nome, Duracao, Categoria) VALUES
 (1, 'Xuxa e os duendes', 180, 'Infantil'),
@@ -95,6 +100,7 @@ INSERT INTO Ator (IDAtor, Ator, Cache, Produtora) VALUES
 (8, 'Scarlett Johansson', 27000, 'Disney');
 
 -- Q5
+
 INSERT INTO Filme_Ator (IDFilme, IDAtor, IDTipo) VALUES
 (1, 1, 1),
 (2, 2, 2),
@@ -108,19 +114,18 @@ SET Duracao = 200
 WHERE Nome = 'Triplo X';
 
 -- Q7
+
 UPDATE Filme
 SET Categoria = 'Aventura'
 WHERE Nome = 'Connan';
 
 -- Q8
--- Se houver constraint de chave estrangeira ativa, remova o vínculo em Filme_Ator primeiro:
--- DELETE FROM Filme_Ator WHERE IDTipo = 2;
+
 DELETE FROM TipoParticipacao
 WHERE IDTipo = 2;
 
 -- Q9
--- Se houver constraint de chave estrangeira ativa, remova o vínculo em Filme_Ator primeiro:
--- DELETE FROM Filme_Ator WHERE IDFilme IN (SELECT IDFilme FROM Filme WHERE Duracao > 410);
+
 DELETE FROM Filme
 WHERE Duracao > 410;
 

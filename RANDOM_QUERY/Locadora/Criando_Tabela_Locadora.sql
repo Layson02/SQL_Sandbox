@@ -25,7 +25,7 @@ CREATE TABLE Ator (
         CONSTRAINT CHK_Ator_ID CHECK (IDAtor >= 1 AND IDAtor <= 999),
     Ator VARCHAR(20) NOT NULL,
     Cache SMALLINT CONSTRAINT chk_cache CHECK (Cache <= 45000),
-    Produtora SMALLINT
+    Produtora VARCHAR(30)
 );
 
 CREATE TABLE TipoParticipacao (
