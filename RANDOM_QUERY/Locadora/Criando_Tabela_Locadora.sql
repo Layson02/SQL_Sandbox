@@ -5,6 +5,11 @@
  END
  GO
 
+
+-- Usar o banco de dados Locadora
+USE Locadora;
+GO
+
 -- 2. Criar as tabelas
 CREATE TABLE Filme (
     IDFilme INT PRIMARY KEY,
