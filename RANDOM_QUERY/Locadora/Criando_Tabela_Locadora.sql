@@ -27,7 +27,7 @@ CREATE TABLE TipoParticipacao (
 CREATE TABLE Filme_Ator (
     IDFilme INT NOT NULL,
     IDAtor INT NOT NULL,
-    IDTipo INT NOT NULL,
+    IDTipo INT NOT NULL
 );
 
 -- 10. Criar tabela Controle Exclusao
