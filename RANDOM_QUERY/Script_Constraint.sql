@@ -1,3 +1,5 @@
+USE [bdpedido];
+GO
 SELECT NomeDoProduto, PrecoUnitario from Produtos
 WHERE PrecoUnitario = 0;
 
