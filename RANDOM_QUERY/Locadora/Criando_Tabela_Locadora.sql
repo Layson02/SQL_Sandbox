@@ -1,6 +1,9 @@
 -- 1. Abrir o banco de dados
-USE Locadora;
-GO
+ IF DB_ID(N'Locadora') IS NULL
+ BEGIN
+     CREATE DATABASE Locadora;
+ END
+ GO
 
 -- 2. Criar as tabelas
 CREATE TABLE Filme (
