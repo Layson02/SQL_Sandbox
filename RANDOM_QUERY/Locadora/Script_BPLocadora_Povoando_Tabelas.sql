@@ -30,7 +30,7 @@ INSERT INTO Ator (IDAtor, Ator, Cache) VALUES
 (7, 'Will Smith', 28000),
 (8, 'Scarlett Johansson', 27000);
 
--- 5. Insira alguns registros na tabela Filme_Ator [cite: 40]
+-- 5. Insira alguns registros na tabela Filme_Ator
 INSERT INTO Filme_Ator (IDFilme, IDAtor, IDTipo) VALUES
 (1, 1, 1),
 (2, 2, 2),
