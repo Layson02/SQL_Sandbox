@@ -30,6 +30,10 @@ INSERT [Usuario] ([NomeUsuario],[ContagemPedidos]) VALUES (N'Silvano Dantas',0)
 --SET IDENTITY_INSERT [Usuario] OFF
 GO
 
+select * from Usuario
+
+select * from PedidoUsuario
+
 -- Povoando a Tabela de Pedidos
 -- SET IDENTITY_INSERT [PedidoUsuario] ON 
 INSERT [PedidoUsuario] ([IDUsuario],[DataPedido]) VALUES (1,CAST(N'2023-10-02' AS Date))
@@ -74,6 +78,14 @@ INSERT [PedidoUsuario] ([IDUsuario],[DataPedido]) VALUES (1,CAST(N'2023-11-05' A
 
 select * from Usuario
 select * from PedidoUsuario
+
+INSERT [PedidoUsuario] ([IDUsuario],[DataPedido]) VALUES (2,CAST(N'2023-11-06' AS Date))
+INSERT [PedidoUsuario] ([IDUsuario],[DataPedido]) VALUES (2,CAST(N'2023-11-07' AS Date))
+
+insert [PedidoUsuario] ([IDUsuario],[DataPedido]) VALUES (3,CAST(N'2023-11-08' AS Date))
+insert [PedidoUsuario] ([IDUsuario],[DataPedido]) VALUES (3,CAST(N'2023-11-09' AS Date))
+insert [PedidoUsuario] ([IDUsuario],[DataPedido]) VALUES (3,CAST(N'2023-11-10' AS Date))
+
 
 -- Criar a trigger para atualizar a contagem de pedidos quando um pedido é excluído
 
