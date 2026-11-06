@@ -50,8 +50,9 @@ INSERT [PedidoUsuario] ([IDUsuario],[DataPedido]) VALUES (3,CAST(N'2023-10-07' A
 INSERT [PedidoUsuario] ([IDUsuario],[DataPedido]) VALUES (4,CAST(N'2023-10-07' AS Date))
 INSERT [PedidoUsuario] ([IDUsuario],[DataPedido]) VALUES (1,CAST(N'2023-10-08' AS Date))
 INSERT [PedidoUsuario] ([IDUsuario],[DataPedido]) VALUES (2,CAST(N'2023-10-08' AS Date))
--- SET IDENTITY_INSERT [PedidoUsuario] OFF
 GO
+-- SET IDENTITY_INSERT [PedidoUsuario] OFF
+
 
 select * from Usuario
 
@@ -101,6 +102,8 @@ BEGIN
 END;
 
 select * from PedidoUsuario
+
+DELETE FROM PedidoUsuario WHERE IDPedidoUsuario in (2,3);
 
 DELETE FROM PedidoUsuario WHERE IDPedidoUsuario in (16,17);
 
