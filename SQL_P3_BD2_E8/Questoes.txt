@@ -1,0 +1,19 @@
+1. Criar uma visão chamada “View_FornecedorPais” que exiba “NomeDaEmpresa”, “Endereco” e “Pais” da tabela “Fornecedores”.
+
+2. Criar uma visão chamada “View_Funcionarios” que mostre os funcionários cujo tratamento seja “Sra.” da tabela “Funcionarios”.
+
+3. Criar uma visão chamada “View_TotalPedidosPorCliente” que exiba “NomeDaEmpresa” e o total de pedidos por cliente.
+
+4. Criar uma visão chamada “View_TotalFuncionario” que combine dados das tabelas “Funcionarios” e “Pedidos” para mostrar “Nome”, “Cargo” e o total de pedidos feito por cada funcionário.
+
+5. Alterar a visão “View_FornecedorPais” para incluir a coluna “Cidade”.
+
+6. Criar uma visão chamada “View_TotalCargo” que combine dados das tabelas “Funcionarios” e “Pedidos” para mostrar “Cargo” e o total de pedidos feito por cada cargo.
+
+7. Excluir a visão “View_TotalFuncionario”.
+
+8. Criar uma visão chamada “View_FornecedoresCidade” que mostre apenas “NomeDaEmpresa”, “Endereco” e “Cidade” da tabela “Fornecedores”, cuja cidade esteja entre London, Osaka, Berlin e São Paulo.
+
+9. Fazer uma consulta à visão “View_FornecedoresCidade” para mostrar todos os fornecedores que moram em “São Paulo”.
+
+10. Fazer uma consulta à visão “View_TotalCargo” para mostrar todos os funcionários com cargo “Representante de Vendas”.
