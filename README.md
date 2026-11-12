@@ -19,6 +19,7 @@ To maintain academic organization, the folders in this repository follow an acro
 * **`BD2`**: Indicates the Database II (Banco de Dados II) course.
 * **`E[number]`**: Indicates the Exercise number.
 * **`RANDOM_QUERY`**: Environment for free testing, experimental queries, and draft scripts.
+* **`BANCOS`**: Initial database scripts, including creation and population.
 
 ---
 
@@ -43,3 +44,4 @@ Para manter a organização acadêmica, as pastas deste repositório seguem um p
 * **`BD2`**: Indica a disciplina de Banco de Dados II.
 * **`E[número]`**: Indica o número do Exercício.
 * **`RANDOM_QUERY`**: Ambiente de testes livres, consultas experimentais e rascunhos de scripts.
+* **`BANCOS`**: Scripts iniciais de criação e povoamento dos bancos de dados.

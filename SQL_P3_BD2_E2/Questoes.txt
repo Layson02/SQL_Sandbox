@@ -1,0 +1,49 @@
+1. Exibir CódigoDoCliente, NomeDaEmpresa e o Endereço de todos os clientes cadastrados na empresa.
+
+2. Exibir o SobreNome, Nome, DataDeNascimento e DataDeContratação de todos os funcionários da empresa.
+
+3. Exibir CódigoDaCategoria, NomeDaCategoria e Descrição das categorias existentes.
+
+4. Exibir o NomeDaEmpresa, NomeDoContato e Telefone de todos os fornecedores da empresa.
+
+5. Exibir CódigoDoProduto, NomeDoProduto e PreçoUnitário de todos os produtos da empresa.
+
+6. Exibir o CódigoDaTransportadora, NomeDaEmpresa e Telefone das transportadoras cadastradas na empresa.
+
+7. Exibir o NomeDoCliente, Endereço e uma coluna adicional com a palavra "Cliente preferencial".
+
+8. Exibir o CódigoDoProduto, uma coluna adicional "Produto existente" e o NomeDoProduto.
+
+9. Exibir o Endereço, TelefoneResidencial, uma coluna adicional "Pertence ao quadro", Ramal e uma coluna adicional "Ativo" da tabela Funcionários.
+
+10. Exibir NomeDaCategoria, Descrição e uma coluna adicional "Definição" da tabela Categorias.
+
+11. Exibir os 5 primeiros registros da tabela Pedidos.
+
+12. Exibir os 15 primeiros registros da tabela Funcionários.
+
+13. Exibir o NomeDaEmpresa dos 3 primeiros registros da tabela Fornecedores.
+
+14. Exibir os 20 primeiros registros da tabela Produtos.
+
+15. Exibir os 2 primeiros registros da tabela Categorias.
+
+16. Exibir o Nome, Cargo e Tratamento dos funcionários da empresa, dando os títulos: Funcionário, Função e Título, respectivamente.
+
+17. Exibir o NomeDaEmpresa, NomeDoContato e CargoDoContato da tabela Fornecedores, criando um título para cada coluna.
+
+18. Exibir o Nome, TelefoneResidencial com o título "Fone" e Observações com o título "Obs" da tabela Funcionários.
+
+19. Exibir NomeDaCategoria com o título "Categoria", Descrição com o título "Observação" e uma coluna adicional com o conteúdo "Aprovado", cujo título seja "Situação", da tabela Categorias.
+
+20. Exibir o CódigoDoProduto, NomeDoProduto, PreçoUnitário e uma coluna adicional com um acréscimo de 7% sobre o PreçoUnitário da tabela Produtos.
+
+21. Exibir o Nome e Sobrenome dos funcionários por ordem decrescente de Nome.
+
+22. Exibir o CódigoDoProduto, NomeDoProduto e PreçoUnitário por ordem crescente de NomeDoProduto.
+
+23. Exibir o CódigoDoProduto com título "Cód.", NomeDoProduto com título "Produto" e PreçoUnitário com título "P. Unitário", por ordem decrescente de CódigoDoProduto.
+
+24. Exibir País, Região, CódigoDoFornecedor, NomeDaEmpresa e NomeDoContato da tabela Fornecedores por ordem crescente de País, decrescente de Região e crescente de NomeDaEmpresa.
+
+25. Exibir o CódigoDoFuncionário, SobreNome e Nome dos funcionários por ordem crescente de País.
