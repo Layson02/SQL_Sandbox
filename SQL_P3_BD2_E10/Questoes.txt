@@ -1,0 +1,11 @@
+1. Criar uma nova coluna na tabela Pedidos, com o nome Total_Pedido, do tipo smallmoney.
+
+2. Atualizar a nova coluna com o resultado obtido na tabela Detalhes do Pedido.
+
+3. Criar uma trigger que informe, a cada inserção na tabela Clientes, uma mensagem com o número de linhas da tabela.
+
+4. Criar uma trigger que atualize a coluna Total_Pedido da tabela Pedidos quando for inserido qualquer registro na tabela Detalhes do Pedido.
+
+5. Criar uma trigger que verifique se a quantidade solicitada na tabela Detalhes do Pedido realmente existe em estoque. Caso contrário, informar a impossibilidade de fornecimento do produto.
+
+6. Criar uma trigger que, ao excluir um pedido, exclua todos os registros correspondentes da tabela Detalhes do Pedido.
