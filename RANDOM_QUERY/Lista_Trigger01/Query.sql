@@ -1,7 +1,7 @@
-USE Lista_Trigger01;
+USE [Lista_Trigger01];
 GO
 
--- Q1: registra os funcionários inseridos.
+-- Q1
 CREATE OR ALTER TRIGGER dbo.trg_Funcionarios_AuditoriaInsert
 ON dbo.Funcionarios
 AFTER INSERT
@@ -15,32 +15,19 @@ BEGIN
 END;
 GO
 
--- Q2, Q8 e Q10: valida salários e aplica os valores automáticos da lista.
-CREATE OR ALTER TRIGGER dbo.trg_Funcionarios_RegrasSalarioInsert
+-- Q2
+CREATE OR ALTER TRIGGER dbo.trg_Funcionarios_ValidarSalarioInsert
 ON dbo.Funcionarios
 AFTER INSERT
 AS
 BEGIN
     SET NOCOUNT ON;
 
-    UPDATE f
-    SET Salario = CASE
-        WHEN i.Cargo = N'Diretor' THEN 15000.00
-        WHEN i.Cargo = N'Estagiário' AND i.Salario IS NULL THEN 3000.00
-        ELSE i.Salario
-    END
-    FROM dbo.Funcionarios AS f
-    INNER JOIN inserted AS i
-        ON i.FuncionarioID = f.FuncionarioID
-    WHERE i.Cargo = N'Diretor'
-       OR (i.Cargo = N'Estagiário' AND i.Salario IS NULL);
-
     IF EXISTS (
         SELECT 1
-        FROM dbo.Funcionarios AS f
-        INNER JOIN inserted AS i
-            ON i.FuncionarioID = f.FuncionarioID
-        WHERE f.Salario < 1000.00
+        FROM inserted
+        WHERE Salario < 1000.00
+          AND (Cargo IS NULL OR Cargo <> N'Diretor')
     )
     BEGIN
         THROW 50001, N'O salário do funcionário não pode ser inferior a R$ 1.000,00.', 1;
@@ -48,8 +35,26 @@ BEGIN
 END;
 GO
 
--- Q2 e Q3: rejeita salários inválidos e registra alterações salariais.
-CREATE OR ALTER TRIGGER dbo.trg_Funcionarios_RegrasSalarioUpdate
+CREATE OR ALTER TRIGGER dbo.trg_Funcionarios_ValidarSalarioUpdate
+ON dbo.Funcionarios
+AFTER UPDATE
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF UPDATE(Salario) AND EXISTS (
+        SELECT 1
+        FROM inserted
+        WHERE Salario < 1000.00
+    )
+    BEGIN
+        THROW 50002, N'O salário do funcionário não pode ser inferior a R$ 1.000,00.', 1;
+    END;
+END;
+GO
+
+-- Q3
+CREATE OR ALTER TRIGGER dbo.trg_Funcionarios_LogSalario
 ON dbo.Funcionarios
 AFTER UPDATE
 AS
@@ -59,15 +64,6 @@ BEGIN
     IF NOT UPDATE(Salario)
     BEGIN
         RETURN;
-    END;
-
-    IF EXISTS (
-        SELECT 1
-        FROM inserted AS i
-        WHERE i.Salario < 1000.00
-    )
-    BEGIN
-        THROW 50002, N'O salário do funcionário não pode ser inferior a R$ 1.000,00.', 1;
     END;
 
     INSERT INTO dbo.LogSalario
@@ -82,7 +78,7 @@ BEGIN
 END;
 GO
 
--- Q4: impede a exclusão de funcionários vinculados ao departamento RH (ID 2).
+-- Q4
 CREATE OR ALTER TRIGGER dbo.trg_Funcionarios_ImpedirExclusaoRH
 ON dbo.Funcionarios
 AFTER DELETE
@@ -101,7 +97,7 @@ BEGIN
 END;
 GO
 
--- Q5: mantém a contagem auxiliar após inserções, exclusões ou mudanças de departamento.
+-- Q5
 CREATE OR ALTER TRIGGER dbo.trg_Funcionarios_AtualizarContagem
 ON dbo.Funcionarios
 AFTER INSERT, DELETE, UPDATE
@@ -134,7 +130,25 @@ BEGIN
 END;
 GO
 
--- Q6: bloqueia nomes que contenham algarismos.
+CREATE OR ALTER TRIGGER dbo.trg_Departamento_CriarContagem
+ON dbo.Departamento
+AFTER INSERT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    INSERT INTO dbo.ContagemFuncionarios (DepartamentoID, QuantidadeFuncionarios)
+    SELECT i.DepartamentoID, 0
+    FROM inserted AS i
+    WHERE NOT EXISTS (
+        SELECT 1
+        FROM dbo.ContagemFuncionarios AS c
+        WHERE c.DepartamentoID = i.DepartamentoID
+    );
+END;
+GO
+
+-- Q6
 CREATE OR ALTER TRIGGER dbo.trg_Funcionarios_ValidarNome
 ON dbo.Funcionarios
 AFTER INSERT
@@ -153,7 +167,7 @@ BEGIN
 END;
 GO
 
--- Q7: armazena os dados dos funcionários excluídos.
+-- Q7
 CREATE OR ALTER TRIGGER dbo.trg_Funcionarios_AuditoriaDelete
 ON dbo.Funcionarios
 AFTER DELETE
@@ -168,7 +182,25 @@ BEGIN
 END;
 GO
 
--- Q9: impede a mudança de departamento de funcionários gerentes.
+-- Q8
+CREATE OR ALTER TRIGGER dbo.trg_Funcionarios_SalarioEstagiario
+ON dbo.Funcionarios
+AFTER INSERT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    UPDATE f
+    SET Salario = 3000.00
+    FROM dbo.Funcionarios AS f
+    INNER JOIN inserted AS i
+        ON i.FuncionarioID = f.FuncionarioID
+    WHERE i.Cargo = N'Estagiário'
+      AND i.Salario IS NULL;
+END;
+GO
+
+-- Q9
 CREATE OR ALTER TRIGGER dbo.trg_Funcionarios_ImpedirMudancaDepartamentoGerente
 ON dbo.Funcionarios
 AFTER UPDATE
@@ -190,20 +222,19 @@ BEGIN
 END;
 GO
 
-CREATE OR ALTER TRIGGER dbo.trg_Departamento_CriarContagem
-ON dbo.Departamento
+-- Q10
+CREATE OR ALTER TRIGGER dbo.trg_Funcionarios_SalarioDiretor
+ON dbo.Funcionarios
 AFTER INSERT
 AS
 BEGIN
     SET NOCOUNT ON;
 
-    INSERT INTO dbo.ContagemFuncionarios (DepartamentoID, QuantidadeFuncionarios)
-    SELECT i.DepartamentoID, 0
-    FROM inserted AS i
-    WHERE NOT EXISTS (
-        SELECT 1
-        FROM dbo.ContagemFuncionarios AS c
-        WHERE c.DepartamentoID = i.DepartamentoID
-    );
+    UPDATE f
+    SET Salario = 15000.00
+    FROM dbo.Funcionarios AS f
+    INNER JOIN inserted AS i
+        ON i.FuncionarioID = f.FuncionarioID
+    WHERE i.Cargo = N'Diretor';
 END;
 GO
