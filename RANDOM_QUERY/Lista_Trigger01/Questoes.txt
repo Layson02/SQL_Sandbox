@@ -1,0 +1,19 @@
+1. Trigger de auditoria de inserção: Crie uma trigger que registre, em uma tabela de log, todos os novos funcionários inseridos, incluindo nome, cargo e data da inserção.
+
+2. Trigger para validar salários: Crie uma trigger que impeça a inserção ou atualização de um salário inferior a R$ 1.000,00.
+
+3. Trigger para atualizar histórico salarial: Crie uma trigger que armazene, em uma tabela de histórico, todas as alterações salariais feitas em funcionários, guardando salário antigo, novo e data da alteração.
+
+4. Trigger para impedir exclusão de funcionários do RH: Crie uma trigger que impeça a exclusão de funcionários cujo DepartamentoID seja do RH (ID = 2).
+
+5. Trigger para atualizar contagem de funcionários por departamento: Crie uma trigger que, após a inserção ou exclusão de funcionários, atualize uma tabela auxiliar com a quantidade de funcionários por departamento.
+
+6. Trigger para validar nome do funcionário: Crie uma trigger que bloqueie a inserção de funcionários cujo nome contenha números.
+
+7. Trigger para auditoria de exclusão: Crie uma trigger que armazene os dados dos funcionários excluídos (nome, cargo, salário e data da exclusão) em uma tabela AuditoriaDelete.
+
+8. Trigger para atribuir salário inicial automático: Crie uma trigger que defina automaticamente o salário inicial de R$ 3.000,00 para qualquer novo funcionário que tenha o cargo "Estagiário", caso não seja informado um valor.
+
+9. Trigger para impedir alteração de departamento de Gerentes: Crie uma trigger que bloqueie a atualização do campo DepartamentoID para funcionários com o cargo “Gerente”.
+
+10. Trigger para ajustar salário baseado no cargo: Crie uma trigger que, ao inserir um funcionário com o cargo “Diretor”, ajuste automaticamente o salário para R$ 15.000,00, mesmo que outro valor tenha sido informado.
