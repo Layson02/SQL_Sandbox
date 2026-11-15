@@ -5,7 +5,7 @@ GO
 CREATE OR ALTER TRIGGER dbo.trg_Funcionarios_AuditoriaInsert
 ON dbo.Funcionarios
 AFTER INSERT
-AS
+select top (2) p.CodigoDoFuncionario, f.Nome, COUNT(*) quantidade,
 BEGIN
     SET NOCOUNT ON;
 
