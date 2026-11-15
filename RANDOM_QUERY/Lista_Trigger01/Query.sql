@@ -40,9 +40,11 @@ ON dbo.Funcionarios
 AFTER UPDATE
 AS
 BEGIN
-    SET NOCOUNT ON;
-
-    IF UPDATE(Salario) AND EXISTS (
+select p.CodigoDoFuncionario, f.Nome, count(*) quantidade
+from Pedidos p
+join Funcionarios f
+    on f.CodigoDoFuncionario = p.CodigoDoFuncionario
+group by p.CodigoDoFuncionario, f.Nome
         SELECT 1
         FROM inserted
         WHERE Salario < 1000.00
