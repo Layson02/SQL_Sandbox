@@ -30,11 +30,11 @@ INSERT INTO Aluno (id_aluno, nome, email) VALUES
 (9, 'Igor Gomes', 'igor@email.com'), (10, 'Julia Santos', 'julia@email.com');
 
 INSERT INTO Curso (id_curso, nome_curso, carga_horaria) VALUES 
-(101, 'Ciência da Computação', 3600), (102, 'Sistemas de Informação', 3200),
+(101, 'CiÃªncia da ComputaÃ§Ã£o', 3600), (102, 'Sistemas de InformaÃ§Ã£o', 3200),
 (103, 'Engenharia de Software', 3400), (104, 'Banco de Dados', 120),
-(105, 'Desenvolvimento Web', 180), (106, 'Inteligência Artificial', 200),
-(107, 'Redes de Computadores', 160), (108, 'Segurança da Informação', 140),
-(109, 'Lógica de Programação', 80), (110, 'Estrutura de Dados', 100);
+(105, 'Desenvolvimento Web', 180), (106, 'InteligÃªncia Artificial', 200),
+(107, 'Redes de Computadores', 160), (108, 'SeguranÃ§a da InformaÃ§Ã£o', 140),
+(109, 'LÃ³gica de ProgramaÃ§Ã£o', 80), (110, 'Estrutura de Dados', 100);
 
 INSERT INTO Matricula (Cod_aluno, Cod_curso, data_matricula) VALUES 
 (1, 101, '2026-05-01'), (2, 102, '2026-05-02'), (3, 103, '2026-05-03'),

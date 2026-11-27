@@ -1,4 +1,4 @@
-﻿1. Exibir o nome do produto cujo preço unitário seja acima do preço unitário médio.
+1. Exibir o nome do produto cujo preço unitário seja acima do preço unitário médio.
 
 2. Exibir um relatório com o nome dos clientes que já compraram o produto "Maxilaku".
 

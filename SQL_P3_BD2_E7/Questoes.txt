@@ -1,4 +1,4 @@
-﻿1. Exibir o total de frete pago.
+1. Exibir o total de frete pago.
 
 2. Quantos funcionários foram contratados em 1992.
 
