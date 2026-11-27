@@ -16,20 +16,20 @@ create table Produto (
 )
 
 INSERT INTO Categoria (id_Categoria, nomeCategoria) VALUES 
-(1, 'Inform·tica'),
+(1, 'Inform√°tica'),
 (2, 'Alimentos'),
 (3, 'Limpeza'),
 (4, 'Papelaria'),
-(5, 'EletrÙnicos');
+(5, 'Eletr√¥nicos');
 
 INSERT INTO Produto (id_Produto, descricao, unidade, valor, CodigoCategoria) VALUES 
 (101, 'Mouse sem fio', 'un', 85, 1),
-(102, 'Teclado Mec‚nico', 'un', 250, 1),
+(102, 'Teclado Mec√¢nico', 'un', 250, 1),
 (103, 'Monitor 24 pol', 'un', 800, 1),
 (104, 'Arroz 5kg', 'un', 25, 2),
-(105, 'Feij„o 1kg', 'un', 9, 2),
+(105, 'Feij√£o 1kg', 'un', 9, 2),
 (106, 'Detergente', 'un', 3, 3),
-(107, 'Caderno 10 matÈrias', 'un', 35, 4),
+(107, 'Caderno 10 mat√©rias', 'un', 35, 4),
 (108, 'Caneta Azul', 'un', 2, 4),
 (109, 'Smartphone X', 'un', 1500, 5),
 (110, 'Fone Bluetooth', 'un', 120, 5);
@@ -44,5 +44,5 @@ INNER JOIN CATEGORIA C ON P.CodigoCategoria = C.id_Categoria;
 SELECT P.descricao, C.nomeCategoria
 FROM PRODUTO P
 INNER JOIN CATEGORIA C ON P.CodigoCategoria = C.id_Categoria
-WHERE C.nomeCategoria = 'Inform·tica';
+WHERE C.nomeCategoria = 'Inform√°tica';
 SELECT COUNT(*) AS 'Total de Produtos' FROM PRODUTO;
