@@ -1,0 +1,19 @@
+1. Criar uma stored procedure que dê um aumento de 5% ao preço unitário dos produtos que pertençam à categoria “Bebidas”.
+
+2. Criar uma stored procedure que altere o valor do frete pago nos pedidos, com uma redução de 0.3 para os pedidos feitos pela transportadora “Speedy Express” e 0,7 feita pela transportadora “United Package”.
+
+3. Criar uma stored procedure para aumentar em cinco unidades o campo “UnidadesEmEstoque” de todos os produtos fornecidos por “Norske Meierier”.
+
+4. Criar uma stored procedure que receba como parâmetro o código do produto, informando ao final se o preço de custo desse produto é maior, menor ou igual ao preço médio dos produtos.
+
+5. Criar uma stored procedure para eliminar todos os produtos de uma determinada categoria, informado via parâmetro (não execute essa procedure).
+
+6. Criar uma stored procedure que ao passar uma quantidade ele possa informar o nome de todos os produtos cujo Unidade em estoque esteja abaixo dessa quantidade, caso não tenha produtos informar uma mensagem.
+
+7. Criar uma stored procedure que ao passar o valor do mês ele informe um relatório de todos os aniversariantes do mês, juntamente com a sua idade.
+
+8. Criar uma stored procedure que eu possa inserir registro na tabela transportadoras (com a passagem de parâmetros).
+
+9. Criar uma stored procedure que eu possa diminuir o valor do frete, informando o nome da transportadora e o mês.
+
+10. Criar uma stored procedure que eu possa informar um determinado preço e uma variável de apoio, que vai controlar o resultado da consulta, ou seja, se é uma consulta com os preços acima, abaixo ou iguais ao passado pelo parâmetro (os preços são em relação ao preço de custo da tabela “Detalhes do Pedido”).
