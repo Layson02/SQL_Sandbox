@@ -46,8 +46,13 @@ INNER JOIN Funcionarios AS f
     ON f.CodigoDoFuncionario = p.CodigoDoFuncionario
 WHERE MONTH(p.DataDoPedido) = 1
   AND DAY(p.DataDoPedido) <= 5;
+GO
 
--- 5.
+-- 5. Diante do código abaixo, responda as questões:
+    -- CREATE TABLE funcao( codigo int,nome varchar(40) NOT NULL, uf varchar(2)
+    -- CONSTRAINT CK_CARGO_NIVEL CHECK (uf IN (‘PB’,’PE’,’CE’,’PI’,’BA’)), idade int NOT NULL, salario real, id_funcionario int,
+    -- FOREIGN KEY(id_funcionario) REFERENCES Disciplina(IDDisciplina))
+
 -- a) Foram criadas 4 constraints: NOT NULL em nome, CHECK em uf,
 --    NOT NULL em idade e FOREIGN KEY em id_funcionario.
 -- b) No atributo uf foi criada uma constraint CHECK.
@@ -60,9 +65,15 @@ IF NOT EXISTS (
       AND parent_object_id = OBJECT_ID('dbo.Produtos')
 )
 BEGIN
-    ALTER TABLE dbo.Produtos
+    -- Ajusta valores legados inválidos para que a constraint possa ser validada.
+    UPDATE dbo.Produtos
+    SET NivelDeReposicao = 1
+    WHERE NivelDeReposicao IS NULL
+       OR NivelDeReposicao <= 0;
+
+    ALTER TABLE dbo.Produtos WITH CHECK
     ADD CONSTRAINT CK_Produtos_NivelDeReposicao
-    CHECK (NivelDeReposicao > 0);
+    CHECK (NivelDeReposicao IS NOT NULL AND NivelDeReposicao > 0);
 END
 GO
 
@@ -74,18 +85,23 @@ IF NOT EXISTS (
       AND parent_object_id = OBJECT_ID('dbo.Detalhes_do_Pedido')
 )
 BEGIN
-    ALTER TABLE dbo.Detalhes_do_Pedido
+    -- Os dados de exemplo possuem descontos fora do intervalo (inclusive 0).
+    -- NOCHECK preserva esses registros legados; novos dados serão validados.
+    ALTER TABLE dbo.Detalhes_do_Pedido WITH NOCHECK
     ADD CONSTRAINT CK_DetalhesDoPedido_Desconto
     CHECK (Desconto BETWEEN 5 AND 8);
 END
 GO
 
 -- 8. Tabela Alunos com identificador único aplicado à coluna ID.
-CREATE TABLE dbo.Alunos (
-    ID INT CONSTRAINT PK_Alunos PRIMARY KEY,
-    ClienteID INT,
-    DataPedido DATE
-);
+IF OBJECT_ID('dbo.Alunos', 'U') IS NULL
+BEGIN
+    CREATE TABLE dbo.Alunos (
+        ID INT CONSTRAINT PK_Alunos PRIMARY KEY,
+        ClienteID INT,
+        DataPedido DATE
+    );
+END
 GO
 
 -- 9. Visão com o total de pedidos por código da transportadora.
